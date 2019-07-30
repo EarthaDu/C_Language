@@ -51,10 +51,10 @@ int  binarysearch(int a[],int len ,int n)
 {
     int beg = 0;
     int end = len-1;
-    int mid = (beg + end) / 2;
     int flag = 0;
     while(beg<end)
     {
+        int mid = (beg + end) / 2;
         if(a[mid]>n)
         {
             end = mid -1;
