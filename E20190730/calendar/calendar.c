@@ -51,7 +51,7 @@ int weekOfDays(int year ,int month)
 }
 void printWeekOfDays(int year,int month)
 {
-	puts(" Sun Mon Tue Wed Thu Fri Sat");
+	puts("  Sun Mon Tue Wed Thu Fri Sat");
 	int days = daysOfTheMonth(year,month);
 	int week = weekOfDays(year,month);
 	int i,k=0;
