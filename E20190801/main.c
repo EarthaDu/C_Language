@@ -15,7 +15,6 @@ int main(int argc, const char *argv[])
 	printf("%#x\n",*p);
 	return 0;
 }
-#endif
 void Puts(const char *p)
 {
 		while(*p)
@@ -80,5 +79,28 @@ int main(int argc, const char *argv[])
 	Strcat(t,s);
 //	printf("%d\n",sTrlen(s));
 	Puts(t);
+	return 0;
+}
+#endif
+int maxOfArray(int (*a)[4] ,int rows)
+{
+		int i,j;
+		int max = *(*(a));
+		for(i = 0;i<rows;++i)
+		{
+				for(j = 0;j<4;++j);
+				{
+						if(max<*( *( a + i ) + j))
+						{
+								max= *( *( a + i ) + j );
+						}
+				}
+		}
+		return max;
+}
+int main(int argc, const char *argv[])
+{
+	int a[][4] = {1,2,3,4,5,6,7,8,9,10,11,12};
+	printf("%d\n",maxOfArray(a,sizeof(a)/sizeof(a[0])));
 	return 0;
 }
